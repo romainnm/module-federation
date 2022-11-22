@@ -6,5 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     2. Generate the mfe-shell: ng generate application mfe-shell --routing --style scss
     3. Generate the mfe-project: ng generate application mfe-project --routing --style scss
 
-## Development server
+## Scripts
+    "start:shell": "ng serve mfe-shell",
+    "start:mfe-project": "ng serve mfe-project", 
+    "start:all": "concurrently\"npm run start:shell\" \"npm run start:mfe-project\" ",
 

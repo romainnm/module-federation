@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:shell": "ng serve mfe-shell",
+    "start:mfe-project": "ng serve mfe-project", 
+    "start:all": "concurrently\"npm run start:shell\" \"npm run start:mfe-project\" ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
   },
