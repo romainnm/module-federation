@@ -4,13 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start:shell": "ng serve mfe-shell",
-    "start:mfe-project": "ng serve mfe-project", 
+    "start:mfe-project": "ng serve mfe-project",
     "start:all": "concurrently\"npm run start:shell\" \"npm run start:mfe-project\" ",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/module-federation": "^14.2.3",
     "@angular/animations": "^14.2.0",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
@@ -27,6 +29,7 @@
     "@angular-devkit/build-angular": "^14.2.10",
     "@angular/cli": "~14.2.8",
     "@angular/compiler-cli": "^14.2.0",
+    "ngx-build-plus": "^13.0.1",
     "typescript": "~4.7.2"
   }
 }
