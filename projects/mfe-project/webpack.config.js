@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'mfe-project',
 
   exposes: {
-    './Component': './projects/mfe-project/src/app/app.component.ts',
+    './Component': './projects/mfe-project/src/app/mfe-project.component.ts',
   },
 
   shared: {
