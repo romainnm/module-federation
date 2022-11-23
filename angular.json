@@ -20,7 +20,9 @@
 						"outputPath": "dist/mfe-shell",
 						"index": "projects/mfe-shell/src/index.html",
 						"main": "projects/mfe-shell/src/main.ts",
-						"polyfills": "projects/mfe-shell/src/polyfills.ts",
+						"polyfills": [
+							"zone.js"
+						],
 						"tsConfig": "projects/mfe-shell/tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
@@ -46,12 +48,6 @@
 									"type": "anyComponentStyle",
 									"maximumWarning": "2kb",
 									"maximumError": "4kb"
-								}
-							],
-							"fileReplacements": [
-								{
-									"replace": "projects/mfe-shell/src/environments/environment.ts",
-									"with": "projects/mfe-shell/src/environments/environment.prod.ts"
 								}
 							],
 							"outputHashing": "all",
@@ -96,10 +92,11 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"main": "projects/mfe-shell/src/test.ts",
-						"polyfills": "projects/mfe-shell/src/polyfills.ts",
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
 						"tsConfig": "projects/mfe-shell/tsconfig.spec.json",
-						"karmaConfig": "projects/mfe-shell/karma.conf.js",
 						"inlineStyleLanguage": "scss",
 						"assets": [
 							"projects/mfe-shell/src/favicon.ico",
@@ -130,7 +127,9 @@
 						"outputPath": "dist/mfe-project",
 						"index": "projects/mfe-project/src/index.html",
 						"main": "projects/mfe-project/src/main.ts",
-						"polyfills": "projects/mfe-project/src/polyfills.ts",
+						"polyfills": [
+							"zone.js"
+						],
 						"tsConfig": "projects/mfe-project/tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
@@ -156,12 +155,6 @@
 									"type": "anyComponentStyle",
 									"maximumWarning": "2kb",
 									"maximumError": "4kb"
-								}
-							],
-							"fileReplacements": [
-								{
-									"replace": "projects/mfe-project/src/environments/environment.ts",
-									"with": "projects/mfe-project/src/environments/environment.prod.ts"
 								}
 							],
 							"outputHashing": "all",
@@ -206,10 +199,11 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"main": "projects/mfe-project/src/test.ts",
-						"polyfills": "projects/mfe-project/src/polyfills.ts",
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
 						"tsConfig": "projects/mfe-project/tsconfig.spec.json",
-						"karmaConfig": "projects/mfe-project/karma.conf.js",
 						"inlineStyleLanguage": "scss",
 						"assets": [
 							"projects/mfe-project/src/favicon.ico",
